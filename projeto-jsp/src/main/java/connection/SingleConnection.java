@@ -14,7 +14,9 @@ public class SingleConnection {
 		return connection;
 	}
 	
-
+	static {
+		conectar(); //Pode dar erro
+	}
 	
 	public SingleConnection() { /*Quando tiver uma instância, vai conectar*/
 		conectar();

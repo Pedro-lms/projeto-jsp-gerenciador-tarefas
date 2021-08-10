@@ -1,0 +1,21 @@
+-- Database: postgres
+
+-- DROP DATABASE postgres;
+
+CREATE DATABASE posjava
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+COMMENT ON DATABASE postgres
+    IS 'default administrative connection database';
+    
+    -- Column: public.model_login.login
+
+-- ALTER TABLE public.model_login DROP COLUMN login;
+
+ALTER TABLE public.model_login
+    ADD COLUMN login character varying(200) COLLATE pg_catalog."default" NOT NULL;
+    --18750 
